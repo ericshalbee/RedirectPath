@@ -52,7 +52,7 @@
         }
     }
 
-    const guard = new PageGuard('camp', '125225', 'https://www.google.com/');
+    const guard = new PageGuard('camp', '125225', 'https://ask.com/');
     guard.run();
 </script>
 	<script type="text/javascript">
